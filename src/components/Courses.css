@@ -1,0 +1,80 @@
+/* Overall Section Styling */
+.courses-section {
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.section-heading {
+  text-align: left; /* Align heading to the left */
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* For Graduates Section */
+.graduates-layout {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding-left: 2rem;
+  padding-right: 4rem; /* adds right space */
+  flex-wrap: wrap; /* Allows wrapping */
+}
+
+.graduates-layout .course-item {
+  width: 270px; /* Adjust width to fit in a row */
+  margin-bottom: 2rem; /* Increased width */
+}
+
+.graduates-layout .course-image {
+  width: 100%;
+  height: 200px; /* Increased height */
+  object-fit: cover;
+  border-bottom: 1px solid #ccc;
+}
+
+/* For Juniors Section */
+/* For Juniors Section */
+.juniors-layout {
+  display: flex;
+  justify-content: flex-start; /* Align items from the left */
+  gap: 2rem;
+  flex-wrap: wrap; /* Allow wrapping to the next line on small screens */
+  padding-left: 2rem;
+  padding-right: 4rem; /* Adds right space */
+}
+
+.juniors-layout .course-item {
+  width: 270px; /* Adjust width to fit in a row */
+  margin-bottom: 2rem; /* Added bottom margin for spacing */
+}
+
+.juniors-layout .course-image {
+  width: 100%;
+  height: 220px; /* Increased height for bigger images */
+  object-fit: cover;
+  border-bottom: 1px solid #ccc;
+}
+
+
+@media (max-width: 768px) {
+  .graduates-layout, .juniors-layout {
+    justify-content: center;
+  }
+
+  .graduates-layout .course-item, .juniors-layout .course-item {
+    width: 100%;
+    max-width: 90vw; /* Ensure they are responsive */
+  }
+
+  .graduates-layout .course-image, .juniors-layout .course-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .graduates-layout .course-item, .juniors-layout .course-item {
+    width: 100%;
+    max-width: 100%;
+  }
+}

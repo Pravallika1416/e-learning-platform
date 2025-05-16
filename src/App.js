@@ -1,23 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import SideMenu from './components/SideMenu';
+import LoginMenu from './components/LoginMenu';
+import Home from './pages/Home';
+import Register from './pages/Register';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css"
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [loginOpen, setLoginOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLoginSuccess = () => {
+    setIsLoggedIn(true);
+    window.location.reload();
+     // Set logged in state to true after successful login
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem("jwt");
+    window.location.reload();
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+    <Router>
+      <Header toggleMobileMenu={() => setMenuOpen(true)} toggleLoginMenu={() => setLoginOpen(true)} />
+      <SideMenu 
+        visible={menuOpen} 
+        closeMenu={() => setMenuOpen(false)} 
+        isLoggedIn={isLoggedIn}
+        handleLogout={handleLogout}
+        toggleLoginMenu={() => setLoginOpen(true)} // Pass the login toggle function to open login menu
+      />
+      <LoginMenu
+        visible={loginOpen}
+        closeLogin={() => setLoginOpen(false)}
+        onLoginSuccess={handleLoginSuccess} // Pass onLoginSuccess to handle successful login
+      />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </Router>
     </div>
   );
 }

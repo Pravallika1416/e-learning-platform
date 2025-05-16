@@ -1,0 +1,578 @@
+/* Intro Section - Black dotted background */
+.intro-section {
+  background-color: #1e1e1e;
+  background-image: radial-gradient(#2e2e2e 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.intro-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.intro-section button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  background-color: #f04141;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.intro-section button:hover {
+  background-color: #d03030;
+}
+/* Courses Section - White Background */
+.courses-section {
+  background-color: white;
+  padding: 4rem 1rem;
+}
+
+.courses-section h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #222;
+}
+
+.courses-container {
+  display: flex;
+  flex-direction: column; /* Stacks the Graduates and Juniors components */
+  gap: 3rem; /* Added a gap between the sections */
+}
+
+/* Optional: You can style each individual section further if necessary */
+.graduates {
+  text-align: left;
+}
+
+.juniors-section {
+  text-align: left;
+}
+/* Achievements Section */
+.achievements-section {
+  background-color: #1e1e1e;
+  background-image: radial-gradient(#2e2e2e 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+  transition: color 1s ease-in-out;
+}
+.acheivement-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  -webkit-text-stroke: 1px white;
+  text-stroke: 1px white;
+  margin-bottom: 2rem;
+}
+.achievements-section.in-view {
+  color: white;
+}
+
+.achievement-line {
+  position: relative;
+  margin: 2rem auto;
+  width: 2px;
+  height: 50px;
+  background-color: gray;
+}
+
+.achievement-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-image: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 2px double white;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  animation: popIn 1s ease-in-out;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Why Us Section */
+.why-us-section {
+  background-color: #1e1e1e;
+  background-image: radial-gradient(#2e2e2e 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.why-us-title{
+
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
+    -webkit-text-stroke: 1px white;
+    /* text-stroke: 1px white; */
+    margin-bottom: 2rem;
+  
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: black;
+  -webkit-text-stroke: 1px black;
+  text-stroke: 1px black;
+  margin-bottom: 2rem;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  color: white;
+  border: 2px solid white;
+  animation: popIn 1s ease-in-out;
+}
+
+.card:nth-child(1) {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+.card:nth-child(2) {
+  background: linear-gradient(to right, #ff512f, #dd2476);
+}
+
+.card:nth-child(3) {
+  background: linear-gradient(to right, #00c9ff, #92fe9d);
+}
+.whyus-section {
+  background-color: #1e1e1e;
+  background-image: radial-gradient(#2e2e2e 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.whyus-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+/* Table and whyCompileIt section  */
+/* Feature Comparison Section */
+/* Feature Comparison Section */
+.feature-compare-section {
+  background-color: #1e1e1e;
+  background-image: radial-gradient(#2e2e2e 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.feature-compare-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.feature-table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.feature-table th,
+.feature-table td {
+  padding: 1rem;
+  border: 1px solid #444;
+  text-align: center;
+}
+
+.feature-table th {
+  background-color: #2a2a2a;
+  color: #fff;
+  font-weight: bold;
+}
+
+.feature-table td {
+  background-color: #333;
+  color: #ddd;
+}
+
+.feature-table td .icon {
+  font-size: 1.4rem;
+  transition: transform 0.4s ease;
+}
+
+.feature-table td .checked {
+  color: #4caf50;
+}
+
+.feature-table td .crossed {
+  color: #f44336;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .feature-compare-section {
+    padding: 2rem 1rem; /* Adjust padding for mobile */
+  }
+
+  /* For mobile devices, allow horizontal scrolling for tables */
+  .feature-table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  .feature-table th,
+  .feature-table td {
+    padding: 0.8rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .feature-table th {
+    text-align: center;
+  }
+
+  /* Prevent column stacking, keep row layout */
+  .feature-table tr {
+    display: table-row;
+  }
+
+  /* Make the table scrollable horizontally */
+  .feature-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .feature-table td .icon {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* Progress Bars */
+.progress-container {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-right: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 10px;
+  animation: fillBar 4s ease-out forwards;
+}
+
+.compileit-bar {
+  background: linear-gradient(270deg, #ff005e, #fffd00, #00ff8f, #00c6ff, #ff005e);
+  background-size: 600% 600%;
+  animation: rainbowMove 4s linear infinite, fillBar 2s ease-out forwards;
+  --fill: 1000%;
+}
+
+.others-bar {
+  background: linear-gradient(90deg, #aaa, #666);
+  --fill: 50%;
+  animation: fillBar 4s ease-out forwards;
+}
+
+/* Keyframes */
+@keyframes fillBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--fill);
+  }
+}
+
+@keyframes rainbowMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.progress-end-label {
+  color: #fff;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.progress-end-label .icon {
+  color: #ffd700;
+  animation: flicker 1s infinite alternate;
+}
+
+/* Lightning icon flicker effect */
+@keyframes flicker {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.2); }
+}
+
+
+
+/* Why CompileIt Section */
+.why-compileit-section {
+  background-color: #1e1e1e;
+  background-image: radial-gradient(#2e2e2e 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.why-compileit-section h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+/* Alumni Section */
+.alumni-section {
+  background-color: white;
+  padding: 3rem 1rem;
+  overflow-x: auto;
+}
+
+.alumni-carousel {
+  display: flex;
+  gap: 2rem;
+  animation: scrollLeft 25s linear infinite;
+  white-space: nowrap;
+}
+
+.alumni-card {
+  min-width: 300px;
+  background-color: #0d0d0d;
+  color: #00ffcc;
+  font-family: monospace;
+  font-size: 0.9rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,255,200,0.2);
+  flex-shrink: 0;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* Stories Section */
+.stories-section {
+  background-color: #1e1e1e;
+  background-image: radial-gradient(#2e2e2e 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.stories-title {
+  color: white;
+}
+
+.stories-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.story-card {
+  background: linear-gradient(135deg, #f3e7ff, #ffe4f0);
+  color: #2c003e;
+  padding: 1.5rem;
+  border-radius: 16px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.story-card:hover {
+  transform: translateY(-8px);
+}
+/* Learning Model Section */
+.learning-model-section {
+  background-color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.learning-model-section h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.learning-model-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.learning-model-stage {
+  text-align: center;
+  max-width: 350px;
+}
+
+.learning-model-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #f04141, #ff8c00); /* Stage 1: Red to Orange */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.learning-model-text:hover {
+  -webkit-text-stroke: 1px #f04141;
+  text-stroke: 1px #f04141;
+}
+/* Faculty Section */
+.faculty-section {
+  background-color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.faculty-section .card-container {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.faculty-card {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Blue to mint */
+  color: #1b1b1b;
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin: 1rem;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.faculty-card:hover {
+  transform: translateY(-6px);
+}
+/* Footer Banner */
+.footer-banner {
+  width: 100%;
+  text-align: center;
+  background-color: #1e1e1e;
+  background-image: radial-gradient(#2e2e2e 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: white;
+  padding: 3rem 1rem;
+  perspective: 1000px;
+}
+
+.footer-title {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: rotate3D 4s ease-in-out infinite;
+  transform-origin: center;
+  margin-bottom: 1rem;
+}
+
+.footer-tagline {
+  font-size: 1.25rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.footer-mission {
+  font-size: 1rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* 3D Animation */
+@keyframes rotate3D {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+

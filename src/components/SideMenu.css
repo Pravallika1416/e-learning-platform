@@ -1,0 +1,131 @@
+/* SideMenu.css */
+
+body.menu-open {
+  overflow: hidden; /* Prevent background scrolling when menu is open */
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #ffffff;
+  color: #1e1e2f;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* ✅ Allows scrolling inside menu */
+}
+
+
+.side-menu.open {
+  transform: translateX(0%);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 28px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-title {
+  font-size: 28px;
+  margin-top: 60px; /* space below close button */
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #00c2ff;
+}
+
+hr {
+  margin: 15px 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+.menu-item {
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  background: none;
+  border: none;
+  /* text-align: left; */
+  /* padding: 10px 0; */
+  cursor: pointer;
+  display: flex;
+  padding-left: 30px;
+  justify-content: space-between;
+  align-items: center;
+  color: #1e1e2f;
+}
+
+.menu-item:focus {
+  /* outline: 2px solid #00c2ff; */
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 30px;
+  margin: 5px 0 10px;
+}
+
+.submenu li {
+  margin: 6px 0;
+}
+
+.submenu li a {
+  text-decoration: none;
+  color: #1e1e2f;
+  font-size: 16px;
+  transition: color 0.2s ease-in-out;
+}
+
+.submenu li a:hover {
+  color: #00c2ff;
+}
+
+.contact {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.login-button {
+  background-color: #db4437;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  
+  border-radius: 4px;
+  cursor: pointer;
+ 
+}
+.mobile-login{
+  padding-left: 40px;
+}
+
+.login-button:hover {
+  background-color: #f04141;
+}
+
+/* Responsive tweaks (optional) */
+@media (min-width: 768px) {
+  .side-menu {
+    width: 400px;
+    right: 0;
+  }
+}

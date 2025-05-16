@@ -1,0 +1,275 @@
+/* General Styles */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%; /* Ensure it stretches full width */
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: white;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Desktop Nav */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dropbtn {
+  background-color: transparent;
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  box-shadow: #f9f9f9;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f9f9f9;
+}
+
+/* Login Button */
+.login-btn {
+  background-color: #f04141;
+  border: none;
+  color: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.login-btn:hover {
+  background-color: #f04141;
+}
+
+/* Mobile Nav */
+.mobile-nav {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1001;
+}
+
+.mobile-menu a {
+  color: black;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  transition: background-color 0.3s;
+}
+
+.mobile-menu a:hover {
+  background-color: #666;
+}
+
+/* Sidebar Menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+}
+
+.sidebar.open {
+  display: flex;
+}
+
+.sidebar .title {
+  margin-bottom: 20px;
+}
+
+.sidebar .dropdown {
+  margin-bottom: 10px;
+}
+
+.sidebar .dropdown-content a {
+  color: black;
+  text-decoration: none;
+  padding: 8px 10px;
+  transition: background-color 0.3s;
+}
+
+.sidebar .dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.sidebar .login-btn {
+  background-color: #f04141;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar .login-btn:hover {
+  background-color: #e03030;
+}
+
+/* Responsive Rules */
+@media screen and (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+}
+/* Sidebar Styling */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;  /* Initially hidden */
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: left 0.3s ease;
+}
+
+.sidebar.open {
+  left: 0; /* Slide in when open */
+}
+
+.sidebar .title {
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+  background-color: #444;
+}
+
+.sidebar .dropdown .dropbtn {
+  background-color: #444;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar .dropdown .dropdown-content {
+  display: none;
+  background-color: #555;
+  padding: 10px;
+}
+
+.sidebar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.sidebar .login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #888;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+/* Mobile Nav */
+.mobile-nav {
+  display: none;
+}
+
+.menu-icon {
+  background: #f04141;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.menu-text {
+  font-size: 1rem;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .menu-icon {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
